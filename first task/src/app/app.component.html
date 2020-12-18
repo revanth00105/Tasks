@@ -1,0 +1,16 @@
+<div id="mySidenav" #mySidenav class="sidenav">
+  <a  class="closebtn" (click)="closeNav()">&times;</a>
+  <a (click)="openMenu()">menu</a>
+  <a (click)="openhalfdisplay()">halfdisplay</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<div >
+<h2>Animated Sidenav Example</h2>
+<p>Click on the element below to open the side navigation menu.</p>
+<span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span>
+</div>
+<router-outlet></router-outlet>
+
+<app-terms></app-terms>
+<app-conditions></app-conditions>
