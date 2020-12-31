@@ -1,0 +1,44 @@
+<p>test works!</p>
+<h2 style="float: right;margin-top:40% ;">{{time | date:' dd/mm/yyyy hh:mm:ss a'}}</h2>
+{{appStatus|async}}
+<div>
+    <ng-container *ngTemplateOutlet="companyLogoTemplate"></ng-container>
+    <h1>Company History</h1>
+    <div>{{companyHistory}}</div>
+  </div>
+  <form  #signIn="ngForm" (ngSubmit)="onSubmit(signIn)">
+    <ng-container *ngTemplateOutlet="companyLogoTemplate"></ng-container>
+    <h1>User info</h1>
+    <label>Name:</label><input type="text" [(ngModel)]="userName" name="userName" />
+    <label>Account ID:</label><input type="text" [(ngModel)]="accountId" name="accountID" />
+    <button>Submit</button>
+  </form>
+  <div class="footer">
+    <ng-container *ngTemplateOutlet="companyLogoTemplate"></ng-container>
+  </div>
+  
+  <ng-template #companyLogoTemplate>
+    <div class="companyLogo">
+      <!-- <img [src]="logoSourceUrl"> -->
+      <label>The ACME company, {{employeeCount}} people working for you!</label>
+    </div>
+  </ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button routerLink="/sample">sample</button>

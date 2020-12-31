@@ -1,0 +1,38 @@
+<!-- <h1 *ngIf="displayName; else elseBlock">
+  Angular
+</h1>
+<ng-template #elseBlock>
+  <h1>Hidden</h1>
+</ng-template> -->
+{{branch|uppercase}}
+{{"hello"|reverse}}
+<!-- <h2 style="float: right;margin-top:50% ;">{{time | date:' dd/mm/yyyy hh:mm:ss a'}}</h2> -->
+<div *ngIf="display ;then thenBlock ; else elseBlock"></div>
+<ng-template #thenBlock>
+  <h2 [ngStyle]="branchStyle">Revanth</h2>
+</ng-template>
+
+<ng-template #elseBlock>
+  <h2 appCustomStyle>Nani</h2>
+</ng-template>
+
+<div [ngSwitch]="branch">
+  <div *ngSwitchCase="'Cse'">u selected cse</div>
+  <div *ngSwitchCase="'Ece'">u selected ece</div>
+  <div *ngSwitchCase="'Civil'">u selected civil</div>
+  <div *ngSwitchDefault>pick again</div>
+</div>
+
+<div *ngFor="let branch of branches ; index as i" [ngStyle]="branchStyle">
+  {{i}} {{branch}}
+</div>
+<button (click)="goto()">click me</button>
+
+
+<router-outlet></router-outlet>
+
+
+
+<p *ngFor="let data of observableData | async">
+  <span>{{data | json}}</span>
+</p>
